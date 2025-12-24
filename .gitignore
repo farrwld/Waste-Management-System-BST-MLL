@@ -1,0 +1,5 @@
+# Mengabaikan semua file executable
+*.exe
+*.o
+*.out
+.vscode/
