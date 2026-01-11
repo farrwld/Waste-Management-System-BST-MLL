@@ -6,11 +6,11 @@
 
 using namespace std;
 
-// --- STRUKTUR BST (Kategori Sampah) ---
+// STRUKTUR BST
 struct Kategori {
-    string namaKategori;   // Unique Key
-    int tingkatBahaya;     // Skala 1-10
-    string gudang[5];      // Array of tipe dasar (maks 5 gudang)
+    string namaKategori;   
+    int tingkatBahaya;     
+    string gudang[5];      
     int jmlGudang;
 };
 
@@ -19,11 +19,11 @@ struct NodeBST {
     NodeBST *left, *right;
 };
 
-// --- STRUKTUR MLL (Pengepul & Jenis Sampah) ---
-typedef string infotypeChild; // Nama Sampah (Tipe Dasar)
+// STRUKTUR MLL
+typedef string infotypeChild; 
 
 struct Pengepul {
-    string idPengepul;     // Unique
+    string idPengepul;    
     string namaPengepul;
     string wilayah;
 };
@@ -34,7 +34,7 @@ struct ElmChild {
 };
 
 struct ElmParent {
-    Pengepul info;         // Record (Tipe Bentukan)
+    Pengepul info;        
     ElmParent *next;
     ElmChild *firstChild;
 };

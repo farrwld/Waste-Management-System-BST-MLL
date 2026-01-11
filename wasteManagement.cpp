@@ -1,6 +1,6 @@
 #include "wasteManagement.h"
 
-// --- IMPLEMENTASI BST ---
+// IMPLEMENTASI BST
 void insertBST(adrBST &root, Kategori X) {
     if (root == NULL) {
         root = new NodeBST;
@@ -12,7 +12,6 @@ void insertBST(adrBST &root, Kategori X) {
         } else if (X.namaKategori > root->info.namaKategori) {
             insertBST(root->right, X);
         } else {
-            // Jika nama sudah ada, update data (sesuai panduan resep)
             cout << "Kategori sudah ada. Memperbarui tingkat bahaya..." << endl;
             root->info.tingkatBahaya = X.tingkatBahaya;
         }
@@ -33,7 +32,7 @@ void viewInorder(adrBST root) {
     }
 }
 
-// --- IMPLEMENTASI MLL ---
+// IMPLEMENTASI MLL
 void insertParent(adrParent &L, Pengepul P) {
     adrParent newP = new ElmParent;
     newP->info = P;
